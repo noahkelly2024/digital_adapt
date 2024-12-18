@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now, Own Never</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: #2b579a;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        nav {
+            background: #1e3d73;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 3rem 1rem;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .slider-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider div {
+            width: 45%;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .slider input[type="range"] {
+            width: 90%;
+            margin: 1rem 0;
+        }
+
+        .timeline {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-top: 2px solid #ddd;
+        }
+
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            color: #2b579a;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #2b579a;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2b579a;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #1e3d73;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .content-grid div {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buy Now, Own Never</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ownership.html">Ownership Issues</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="solutions.html">Solutions</a>
+    </nav>
+
+    <section class="hero">
+        <h2>What You Own Isn&#39;t Always Yours to Keep</h2>
+        <p>Explore the hidden truths of digital ownership and how it affects consumers like you.</p>
+        <a href="ownership.html" class="button">Learn More</a>
+    </section>
+
+    <section>
+        <h2>What Consumers Think They Own</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div id="physical">Physical: Retain permanently</div>
+                <input type="range" id="ownership-slider" min="0" max="100" value="50">
+                <div id="digital">Digital: Revocable at any time</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h2>Case Studies: The Cost of License Revocation</h2>
+        <div class="timeline-item">
+            <h3>Google Stadia (2023)</h3>
+            <p>Launched in 2019 and shut down in 2023, leaving consumers without access to purchased games.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Anthem (2020)</h3>
+            <p>BioWare discontinued support despite prior promises, rendering consumer investments worthless.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Nintendo 3DS eShop (2023)</h3>
+            <p>Thousands of games became inaccessible when the eShop servers were shut down.</p>
+        </div>
+        <a href="case-studies.html" class="button">Read More Case Studies</a>
+    </section>
+
+    <footer>
+        <p>Act now: <a href="#">Sign the petition</a> for better digital ownership rights!</p>
+        <p>&copy; 2024 Buy Now, Own Never</p>
+    </footer>
+
+    <script>
+        const slider = document.getElementById('ownership-slider');
+        const physical = document.getElementById('physical');
+        const digital = document.getElementById('digital');
+
+        slider.addEventListener('input', () => {
+            const value = slider.value;
+            physical.style.opacity = 1 - value / 100;
+            digital.style.opacity = value / 100;
+        });
+    </script>
+</body>
+</html>
+
+<!-- ownership.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ownership Issues</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ownership Issues</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ownership.html">Ownership Issues</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="solutions.html">Solutions</a>
+    </nav>
+    <section>
+        <h2>The Problem with Digital Ownership</h2>
+        <p>Unlike physical goods, digital licenses can be revoked at any moment, leaving consumers powerless and often uncompensated.</p>
+        <p>Key issues include lack of transparency, short product lifespans, and restrictive EULAs that protect corporations over consumers.</p>
+    </section>
+</body>
+</html>
+
+<!-- case-studies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Case Studies</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="ownership.html">Ownership Issues</a>
+        <a href
